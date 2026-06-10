@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dallin Theriault, builds working software by directing AI development tools</title>
+  <meta name="description" content="Dallin Theriault architects and directs software systems by driving AI coding tools. Three real, working projects: Field, Nillad, and Field PM." />
+
+  <!-- Open Graph / LinkedIn preview. Update og:url and og:image once the final domain is set. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dallin Theriault, builds working software by directing AI development tools" />
+  <meta property="og:description" content="A field-operations and sales background, now shipping real software by directing AI tools. Three projects, all on GitHub." />
+  <!-- TODO: set absolute URLs once domain is chosen -->
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/images/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+
+    <!-- ============================== HERO ============================== -->
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Dallin Theriault</p>
+        <h1>Builds working software by directing AI development tools.</h1>
+        <p class="lede">American Fork, Utah</p>
+        <nav class="links" aria-label="Primary contact links">
+          <a class="btn" href="mailto:Dallintheriault@live.com">Email</a>
+          <a class="btn" href="https://github.com/DallinTheriault" target="_blank" rel="noopener">GitHub</a>
+          <!-- TODO: paste Dallin's LinkedIn profile URL into href below, then remove the data-placeholder attribute -->
+          <a class="btn" href="#" data-placeholder="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="about" aria-labelledby="about-h">
+      <div class="wrap">
+        <h2 id="about-h">Why I'm doing this</h2>
+        <p>I architect and direct software systems rather than write the code by hand. I make the technical decisions, scope the work, drive AI coding tools to build it, and debug against real logs until it runs. I've shipped real, working projects this way.</p>
+        <p>I am not a software engineer, and I say so plainly. I come from field operations and client-facing sales, not a computer-science track. I taught myself to ship real systems by directing AI tools, and I run two businesses while I do it: Theriault Property Services LLC (DBA Sharpline Painting Co.) and Dallin Paul Ventures LLC (DBA Field AI).</p>
+        <p>I'm looking for a role where owning a problem end to end and communicating clearly matters more than a traditional coding pedigree.</p>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="projects" aria-labelledby="projects-h">
+      <div class="wrap">
+        <h2 id="projects-h">Projects</h2>
+        <p class="section-note">I designed and directed each of these. The code was written with AI tools under my direction. Source and full READMEs are on GitHub.</p>
+
+        <!-- ---------- Project 1: Field ---------- -->
+        <article class="project">
+          <div class="project-head">
+            <h3>Field</h3>
+            <p class="tagline">Multi-tenant SaaS with an AI voice receptionist</p>
+          </div>
+
+          <!-- SCREENSHOT SLOT: Field, "Cascade" demo tenant, DESKTOP width. Replace images/field-cascade.svg with your screenshot (see IMAGES.md). -->
+          <figure class="shot shot-desktop">
+            <img src="images/field-cascade.svg" alt="Field dashboard, Cascade demo tenant" loading="lazy" />
+          </figure>
+
+          <p class="desc">A platform for service businesses: an AI agent answers calls, detects what the caller needs, books jobs, and captures leads, with each client's data fully isolated using PostgreSQL row-level security. I built it to a working demo and deliberately stopped at v0.6.3 after deciding the market was too saturated to chase, knowing when to stop is part of the point.</p>
+          <p class="stack"><span class="stack-label">Built with</span> VAPI · n8n · Supabase / PostgreSQL · Next.js · Twilio</p>
+          <p class="project-links">
+            <a class="btn" href="https://github.com/DallinTheriault/field-dashboard" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-ghost" href="https://sharpline.getfield.co" target="_blank" rel="noopener">Live demo</a>
+          </p>
+        </article>
+
+        <!-- ---------- Project 2: Nillad ---------- -->
+        <article class="project">
+          <div class="project-head">
+            <h3>Nillad</h3>
+            <p class="tagline">Local-first personal AI assistant</p>
+          </div>
+
+          <!-- SCREENSHOT SLOT: Nillad chat. PHONE width. Replace images/nillad-chat.svg with your screenshot (see IMAGES.md). -->
+          <figure class="shot shot-phone">
+            <img src="images/nillad-chat.svg" alt="Nillad chat interface" loading="lazy" />
+          </figure>
+
+          <p class="desc">A private assistant that runs entirely on my own hardware: tool-calling chat, reminders, two-way SMS, and a calendar, with data that never leaves the machine. Cut response time from over 45 seconds to about 1 to 2 by finding the real bottleneck and rebuilding the chat to talk to the local model directly.</p>
+          <p class="stack"><span class="stack-label">Built with</span> Ollama · Next.js · SQLite · n8n · Twilio · Tailscale</p>
+          <p class="project-links">
+            <a class="btn" href="https://github.com/DallinTheriault/nillad" target="_blank" rel="noopener">View on GitHub</a>
+            <span class="btn btn-static" aria-disabled="true">Runs locally, no public URL</span>
+          </p>
+        </article>
+
+        <!-- ---------- Project 3: Field PM ---------- -->
+        <article class="project">
+          <div class="project-head">
+            <h3>Field PM</h3>
+            <p class="tagline">After-hours emergency maintenance triage for property managers</p>
+          </div>
+
+          <!-- SCREENSHOT SLOT: Field PM, "Summit Ridge Residential" demo tenant, PHONE width. Replace images/field-pm-summit.svg with your screenshot (see IMAGES.md). -->
+          <figure class="shot shot-phone">
+            <img src="images/field-pm-summit.svg" alt="Field PM app, Summit Ridge Residential demo tenant" loading="lazy" />
+          </figure>
+
+          <p class="desc">An AI voice agent answers a property company's after-hours line, verifies the caller against residents on file, classifies whether it's a true emergency, and either escalates to the on-call technician with a tracked work order or defers it to business hours. Intake runs on serverless edge functions I verified directly against the live endpoint: authorized requests run the full triage chain, unauthenticated ones are rejected.</p>
+          <p class="stack"><span class="stack-label">Built with</span> Vapi · Supabase Edge Functions / PostgreSQL · Next.js</p>
+          <p class="project-links">
+            <a class="btn" href="https://github.com/DallinTheriault/field-pm" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-ghost" href="https://app.getfield.co" target="_blank" rel="noopener">Live demo</a>
+          </p>
+        </article>
+
+        <!-- ---------- Lost Arcana (lower weight) ---------- -->
+        <p class="aside">
+          <strong>Lost Arcana.</strong> A first-person game I'm building on the side in Unreal Engine 5 and Blender, for fun and to keep learning new tools.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <footer class="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <h2 id="contact-h">Get in touch</h2>
+        <p>Happy to talk. The best way to reach me is email.</p>
+        <nav class="links" aria-label="Footer contact links">
+          <a class="btn" href="mailto:Dallintheriault@live.com">Dallintheriault@live.com</a>
+          <a class="btn" href="https://github.com/DallinTheriault" target="_blank" rel="noopener">GitHub</a>
+          <!-- TODO: paste LinkedIn URL here too -->
+          <a class="btn" href="#" data-placeholder="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <p class="fine">Built by Dallin Theriault. Personal site, no tracking.</p>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
