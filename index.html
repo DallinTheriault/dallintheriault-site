@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0b0e" />
   <title>Dallin Theriault, builds working software by directing AI development tools</title>
   <meta name="description" content="Dallin Theriault architects and directs software systems by driving AI coding tools. Three real, working projects: Field, Nillad, and Field PM." />
 
@@ -54,19 +55,19 @@
         <p class="section-note">I designed and directed each of these. The code was written with AI tools under my direction. Source and full READMEs are on GitHub.</p>
 
         <!-- ---------- Project 1: Field ---------- -->
-        <article class="project">
+        <article class="project reveal">
           <div class="project-head">
             <h3>Field</h3>
             <p class="tagline">Multi-tenant SaaS with an AI voice receptionist</p>
           </div>
 
-          <!-- SCREENSHOT SLOT: Field, "Cascade" demo tenant, DESKTOP width. Replace images/field-cascade.svg with your screenshot (see IMAGES.md). -->
-          <figure class="shot shot-desktop">
-            <img src="images/field-cascade.svg" alt="Field dashboard, Cascade demo tenant" loading="lazy" />
+          <figure class="shot">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="images/field-cascade.png" alt="Field dashboard overview for the Cascade demo tenant: KPI cards and a recent-calls feed" loading="lazy" />
           </figure>
 
           <p class="desc">A platform for service businesses: an AI agent answers calls, detects what the caller needs, books jobs, and captures leads, with each client's data fully isolated using PostgreSQL row-level security. I built it to a working demo and deliberately stopped at v0.6.3 after deciding the market was too saturated to chase, knowing when to stop is part of the point.</p>
-          <p class="stack"><span class="stack-label">Built with</span> VAPI · n8n · Supabase / PostgreSQL · Next.js · Twilio</p>
+          <p class="stack"><span class="stack-label">Built with</span><span class="chip">VAPI</span><span class="chip">n8n</span><span class="chip">Supabase / PostgreSQL</span><span class="chip">Next.js</span><span class="chip">Twilio</span></p>
           <p class="project-links">
             <a class="btn" href="https://github.com/DallinTheriault/field-dashboard" target="_blank" rel="noopener">View on GitHub</a>
             <a class="btn btn-ghost" href="https://sharpline.getfield.co" target="_blank" rel="noopener">Live demo</a>
@@ -74,19 +75,19 @@
         </article>
 
         <!-- ---------- Project 2: Nillad ---------- -->
-        <article class="project">
+        <article class="project reveal">
           <div class="project-head">
             <h3>Nillad</h3>
             <p class="tagline">Local-first personal AI assistant</p>
           </div>
 
-          <!-- SCREENSHOT SLOT: Nillad chat. PHONE width. Replace images/nillad-chat.svg with your screenshot (see IMAGES.md). -->
-          <figure class="shot shot-phone">
-            <img src="images/nillad-chat.svg" alt="Nillad chat interface" loading="lazy" />
+          <figure class="shot">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="images/nillad-chat.png" alt="Nillad home screen: the local assistant interface with surfaced tasks" loading="lazy" />
           </figure>
 
           <p class="desc">A private assistant that runs entirely on my own hardware: tool-calling chat, reminders, two-way SMS, and a calendar, with data that never leaves the machine. Cut response time from over 45 seconds to about 1 to 2 by finding the real bottleneck and rebuilding the chat to talk to the local model directly.</p>
-          <p class="stack"><span class="stack-label">Built with</span> Ollama · Next.js · SQLite · n8n · Twilio · Tailscale</p>
+          <p class="stack"><span class="stack-label">Built with</span><span class="chip">Ollama</span><span class="chip">Next.js</span><span class="chip">SQLite</span><span class="chip">n8n</span><span class="chip">Twilio</span><span class="chip">Tailscale</span></p>
           <p class="project-links">
             <a class="btn" href="https://github.com/DallinTheriault/nillad" target="_blank" rel="noopener">View on GitHub</a>
             <span class="btn btn-static" aria-disabled="true">Runs locally, no public URL</span>
@@ -94,19 +95,19 @@
         </article>
 
         <!-- ---------- Project 3: Field PM ---------- -->
-        <article class="project">
+        <article class="project reveal">
           <div class="project-head">
             <h3>Field PM</h3>
             <p class="tagline">After-hours emergency maintenance triage for property managers</p>
           </div>
 
-          <!-- SCREENSHOT SLOT: Field PM, "Summit Ridge Residential" demo tenant, PHONE width. Replace images/field-pm-summit.svg with your screenshot (see IMAGES.md). -->
-          <figure class="shot shot-phone">
-            <img src="images/field-pm-summit.svg" alt="Field PM app, Summit Ridge Residential demo tenant" loading="lazy" />
+          <figure class="shot">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="images/field-pm-summit.png" alt="Field PM: an emergency maintenance work order for the Summit Ridge Residential demo tenant" loading="lazy" />
           </figure>
 
           <p class="desc">An AI voice agent answers a property company's after-hours line, verifies the caller against residents on file, classifies whether it's a true emergency, and either escalates to the on-call technician with a tracked work order or defers it to business hours. Intake runs on serverless edge functions I verified directly against the live endpoint: authorized requests run the full triage chain, unauthenticated ones are rejected.</p>
-          <p class="stack"><span class="stack-label">Built with</span> Vapi · Supabase Edge Functions / PostgreSQL · Next.js</p>
+          <p class="stack"><span class="stack-label">Built with</span><span class="chip">Vapi</span><span class="chip">Supabase Edge Functions / PostgreSQL</span><span class="chip">Next.js</span></p>
           <p class="project-links">
             <a class="btn" href="https://github.com/DallinTheriault/field-pm" target="_blank" rel="noopener">View on GitHub</a>
             <a class="btn btn-ghost" href="https://app.getfield.co" target="_blank" rel="noopener">Live demo</a>
@@ -136,5 +137,23 @@
     </footer>
 
   </main>
+
+  <script>
+    // Subtle scroll-reveal for project cards. Respects reduced-motion and old browsers.
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
