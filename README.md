@@ -37,4 +37,4 @@ the repo root as-is.
 - **LinkedIn URL:** search `index.html` for `data-placeholder="linkedin"` (two spots) and
   paste the profile URL into the `href`.
 - **Screenshots:** see `IMAGES.md`.
-- **Final domain:** update the `og:url` and `og:image` meta tags in `index.html`.
+- **Domain:** live at https://dallintheriault.dev (meta tags already set).
